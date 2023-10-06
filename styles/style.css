@@ -13,7 +13,6 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
-  height: 100vh;
   display: flex;
   align-items: center;
   color: #fff;
@@ -51,15 +50,11 @@ ol {
   white-space: nowrap;
 }
 
-.page {
-  height: 100vh
-}
-
 .content {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  padding: 133px 30px;
+  padding: 0 30px;
 }
 
 .result {
@@ -95,7 +90,7 @@ ol {
 
 .search-form__fieldset-title {
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -111,7 +106,7 @@ ol {
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
   color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -123,11 +118,6 @@ ol {
 .search-form__textfield:focus {
   outline: none;
 }
-
-.search-form__label:has(:focus-visible) {
-  border: 1px solid #fff;
-}
-
 
 .search-form__checkbox-list {
   display: flex;
@@ -144,12 +134,6 @@ ol {
 
 .search-form__label:hover {
   text-decoration: underline;
-}
-
-.search-form__label:focus-visible {
-  padding: 1px;
-  outline: none;
-  border: 1px solid #fff;
 }
 
 .search-form__pseudo-checkbox {
@@ -169,7 +153,6 @@ input[type="checkbox"]:checked + span {
   /* margin: 1px; */
   /* outline: 1px solid #fff; */
   border: 1px solid #fff;
-
   /* background: #fff; */
   position: relative;
 }
@@ -193,14 +176,14 @@ input[type="checkbox"]:checked + span::before {
   border: 1px solid #fff;
   color: #FFF;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-
   height: 34px;
   width: 100%;
+  margin: 2px
 }
 
 .button:hover {
@@ -212,10 +195,8 @@ input[type="checkbox"]:checked + span::before {
 }
 
 .button:focus-visible {
-  border: 1px solid #fff;
   outline: 1px solid #fff;
   outline-offset: 1px;
-  margin: 2px;
 }
 
 button:active {
@@ -225,30 +206,28 @@ button:active {
 .search-form__submit-button {
   color: #FFF;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-
   align-self: end;
   justify-self: end;
 }
 
 .content__details {
-  width: 400px;
+  inline-size: 100%;
   height: 100%;
 }
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
   line-height: 94%; /* 70.5px */
   text-transform: uppercase;
-
   margin-bottom: 26px;  
 }
 
@@ -258,14 +237,10 @@ button:active {
 
 .content__list {
   max-height: 298px;
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
-
-  
-
   position: relative;
 }
 
@@ -290,21 +265,9 @@ button:active {
   background: #545050;
 }
 
-.content__list-item:hover {
+.content__card-link:hover {
   text-decoration: underline;
   text-decoration-color: #FFF;
-}
-
-.content__list-item:focus {
-  outline: none;
-  border: none;
-}
-
-.content__list-item:focus-visible {
-  /* border: 1px solid #fff; */
-  border: none;
-  outline: none;
-  margin: 5px;
 }
 
 .content__card-link:focus {
@@ -313,7 +276,8 @@ button:active {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  margin: 2px;
   /* outline: 1px solid #fff; */
   /* margin: 1px; */
 }
@@ -324,7 +288,7 @@ button:active {
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -337,7 +301,7 @@ button:active {
 
 .content__video-card-description {
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
